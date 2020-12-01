@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Control Cafetera </title>
+		<link rel="icon" href="{{ url_for('static', filename='etc/favicon.png') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!---TopNavBar -->
+		<ul>
+		  <li ><a class="active" href="/">Home</a></li>
+		  <li> <p class="title"> <b> CafeteraSmart </b> </p> </li>
+		  <li style="float:right"><a href="./contact">Contact</a></li>
+		  <li style="float:right" ><a href="./about">About</a></li>
+		  <li style="float:right"><a href="./control">Control</a></li>
+		  <li style="float:right"><a href="./nCoffee">New Coffee</a></li>
+		</ul>
+
+		<!---Imagen y primer parrafo -->
+		<div style="padding:0 16px;">
+		  <h2 class="firstTitle">Contact with us! </h2>
+		  <p class="firstTitle"> If you have any trouble with the product, you can contact us with this two alternatives: </p>
+		</div>
+
+		<div class="card">
+		  <img src="https://image.flaticon.com/icons/png/512/20/20520.png" alt="Avatar" class="imagenCard">
+		  <div class="container">
+		    <h4 class="centralP2"><b>Correo Electrónico</b></h4> 
+		    <p class="centralP2"> rafamartinez415@gmail.com </p> 
+
+		  </div>
+		</div>
+
+		<div class="card">
+		  <img src="https://st.depositphotos.com/1041273/4444/v/600/depositphotos_44446167-stock-illustration-vintage-telephone-icon.jpg" alt="Avatar" class="imagenCard">
+		  <div class="container">
+		    <h4 class="centralP2"><b>Telefono</b></h4> 
+		    <p class="centralP2"> +34 673 19 44 09 </p> 
+		  </div>
+		</div>
+
+		<!---BottomNavBar -->
+		<ul class="bottomNavBar">
+			 <p class="bottomText"> @2020 - Universidad de León - Rafael Martínez Matías </p>
+		</ul>
+	</body>
+</html> 

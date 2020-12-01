@@ -1,0 +1,77 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+.coffee{
+  color:brown;
+}
+.water{
+  color:blue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #483D8B;
+}
+.bottomNavBar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #483D8B;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #00008B;
+}
+
+.active {
+  background-color: #6495ED;
+}
+
+.title {
+	color: white;
+	padding-left: 10px;
+	font-size: 15px;
+}
+
+.firstTitle {
+	text-align: center;
+}
+
+.imagenCentral{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.centralP {
+	margin: 10px 200px 30px 200px;
+	text-align: justify;
+  text-justify: inter-word;
+}
+.bottomText {
+	text-align: center;
+	color: white;
+}
+

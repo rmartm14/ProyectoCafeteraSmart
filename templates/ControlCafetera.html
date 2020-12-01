@@ -1,0 +1,39 @@
+<!DOCTYPE html>	
+<html>
+	<head>
+		<title> Control Cafetera </title>
+		<link rel="icon" href="{{ url_for('static', filename='etc/favicon.png') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!---TopNavBar -->
+		<ul>
+		  <li ><a class="active" href="./">Home</a></li>
+		  <li> <p class="title"> <b> CafeteraSmart </b> </p> </li>
+		  <li style="float:right"><a href="./contact">Contact</a></li>
+		  <li style="float:right" ><a href="./about">About</a></li>
+		  <li style="float:right"><a href="./control">Control</a></li>
+		  <li style="float:right"><a href="./nCoffee">New Coffee</a></li>
+		</ul>
+
+		<!---Imagen y primer parrafo -->
+		<div style="padding:0 16px;">
+		  <h2 class="firstTitle">Welcome to your smart coffee machine! </h2>
+		  <img src="{{ url_for('static', filename='etc/cafetera.jpg') }}" class="imagenCentral"/>
+		  <p class="centralP"> The main purpose of this <b style="color:brown;"> coffee </b> machine is to have your <b style="color:brown;"> coffee </b> done at the time you want. That's simple but
+		  very comfortable. So, the main work of it is selecting the time and filling the <b style="color:blue"> water </b> and <b style="color:brown;"> coffee </b> deposit. If this two aren't filled, it will show you an alert to fill it. The filling of the <b style="color:blue"> water </b> and <b style="color:brown;"> coffee </b> deposit is manual.</p>
+		</div>
+		
+		<div style="text-align: center">
+			<button class="btn start" value="Start" onclick="location.href='/nCoffee'"> Start Making Coffee</button>
+		</div>
+		<!---BottomNavBar -->
+		<ul class="bottomNavBar">
+			 <p class="bottomText"> @2020 - Universidad de León - Rafael Martínez Matías </p>
+		</ul>
+	</body>
+</html> 

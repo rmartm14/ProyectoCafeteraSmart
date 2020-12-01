@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Control Cafetera </title>
+		<link rel="icon" href="{{ url_for('static', filename='etc/favicon.png') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!---TopNavBar -->
+		<ul>
+		  <li ><a class="active" href="/">Home</a></li>
+		  <li> <p class="title"> <b> CafeteraSmart </b> </p> </li>
+		  <li style="float:right"><a href="./contact">Contact</a></li>
+		  <li style="float:right" ><a href="./about">About</a></li>
+		  <li style="float:right"><a href="./control">Control</a></li>
+		  <li style="float:right"><a href="./nCoffee">New Coffee</a></li>
+		</ul>
+
+		<!---Imagen y primer parrafo -->
+		<div style="padding:0 16px;">
+		  <h2 class="firstTitle"> Coffee Done! </h2>
+		</div>
+		<div style="padding:0 16px; text-align: center">
+			<img src="https://i.pinimg.com/originals/a0/77/c1/a077c124ff008b1e9be71e96bf1189cd.gif" alt="Avatar" class="imagenCard">
+			<p class="centralP2"> Your coffee is planned to be done at {{time}} </p>
+			<button class="btn success" value="Start" onclick="location.href='/'">Return</button>
+		</div>
+		<!---BottomNavBar -->
+		<ul class="bottomNavBar">
+			 <p class="bottomText"> @2020 - Universidad de León - Rafael Martínez Matías </p>
+		</ul>
+	</body>
+</html> 

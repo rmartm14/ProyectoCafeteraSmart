@@ -1,0 +1,176 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+h2{
+  font-family: 'Dancing Script', cursive;
+  font-size:50px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #483D8B;
+}
+.bottomNavBar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #483D8B;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top:10px;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 100%
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #00008B;
+}
+
+.active {
+  background-color: #6495ED;
+  height: 100%
+}
+
+.title {
+	color: white;
+	padding-left: 10px;
+	font-size: 15px;
+}
+
+.firstTitle {
+	text-align: center;
+}
+
+.imagenCentral{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 300px;
+  max-height: 300px;
+}
+.imagenCard{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 300px;
+  height: 160px;
+}
+
+
+.centralP {
+	margin: 10px 200px 15px 200px;
+	text-align: justify;
+  text-justify: inter-word;
+}
+.centralP2 {
+  text-align: center;
+  text-justify: inter-word;
+}
+
+.bottomText {
+	text-align: center;
+	color: white;
+}
+.card {
+  display:inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  margin-left:100px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cardContainer{
+  text-align: center;
+}
+.cardControl {
+  display:inline-block;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  max-height: 20%
+  margin-left:100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.cardControl:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.success {
+  border-color: #4CAF50;
+  color: green;
+}
+.start {
+  background-color: #EAECEE;
+  border-color: brown;
+  color: brown;
+}
+
+.success:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+.coffeeReady {
+  padding: 20px;
+  background-color: green;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  margin-bottom: 3px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}

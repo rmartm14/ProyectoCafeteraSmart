@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Control Cafetera </title>
+		<link rel="icon" href="{{ url_for('static', filename='etc/favicon.png') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!---TopNavBar -->
+		<ul>
+		  <li ><a class="active" href="/">Home</a></li>
+		  <li> <p class="title"> <b> CafeteraSmart </b> </p> </li>
+		  <li style="float:right"><a href="./contact">Contact</a></li>
+		  <li style="float:right" ><a href="./about">About</a></li>
+		  <li style="float:right"><a href="./control">Control</a></li>
+		  <li style="float:right"><a href="./nCoffee">New Coffee</a></li>
+		</ul>
+
+		<!---Imagen y primer parrafo -->
+		<div style="padding:0 16px;">
+		  <h2 class="firstTitle">Control </h2>
+		</div>
+
+		<div class="cardContainer">
+			<div class="cardControl">
+			  <img src="https://i.pinimg.com/originals/68/4b/88/684b8804a1f345e4fb8e42354a95e99c.png" alt="CoffeeImg" class="imagenCard">
+			  <div class="container">
+			    <h4 class="centralP2"><b>Coffee</b></h4> 
+			        <div style="text-align: center;">
+			        	<label for="file">Coffee Level:</label>
+			        	<progress id="file" value={{coffeeLevel}} max="100"> 32% </progress>
+			        	<p style="outline-style: double;"> {{coffeeLevel}} %</p>
+			    	</div>
+			  </div>
+			</div>
+
+			<div class="cardControl">
+			  <img src="https://www.pngkey.com/png/full/418-4182543_colorear-gota-de-agua-dibujo-de-gota-agua.png" alt="WaterImg" class="imagenCard">
+			  <div class="container">
+			    <h4 class="centralP2"><b>Water</b></h4>
+			    <div style="text-align: center;">
+			    	<label for="file">Water Level:</label>
+			    	<progress id="file" value={{waterLevel}} max="100"> 32% </progress>
+			    	<p style="outline-style: double;"> {{waterLevel}} %</p>
+				</div>
+			  </div>
+			</div>
+
+			<div class="cardControl">
+			  <img src="https://cdn.pixabay.com/photo/2020/07/19/13/44/thermometer-5420066_960_720.png" alt="TempMeter" class="imagenCard">
+			  <div class="container">
+			    <h4 class="centralP2"><b>Temperature</b></h4> 
+			        <div style="text-align: center;">
+			        	<label for="file">Water Temperature:</label>
+			        	<progress id="file" value={{temperature}} max="100"> 32% </progress>
+			        	<p style="outline-style: double;"> {{temperature}} ºC</p>
+			    	</div>
+			  </div>
+			</div>
+
+			<div class="cardControl">
+			  <img src="https://lh3.googleusercontent.com/proxy/KFj9OATNnz7VInIhH59SVOWfFEC2qz2-UE0j7ZFcZy__NApgsyFqaza6CoYSg3DqlDv_sOPOVSa_zNMr5OhNtXqukVyEAN55eceLemHHVu3Q4fQmWBa73R-jMYi3o3fjhg" alt="Avatar" class="imagenCard">
+			  <div class="container">
+			    <h4 class="centralP2"><b>Coffee filter remaining cups: </b></h4>
+			    <div style="text-align: center;">
+			    	<label for="file">Remaining cups:</label>
+			    	<progress id="file" value={{remainingCups}} max="100"> </progress>
+			    	<p style="outline-style: double;"> {{remainingCups}} cups </p>
+				</div>
+			  </div>
+			</div>
+		</div>
+
+		<!--Diseño de alertas con if responsive -->
+		{% if remainingCups == 0 %}
+		<div class="alert">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		  <strong>Warning!</strong> You have to change your coffee filter to make a new coffee
+		</div>
+		{% endif %}
+
+		{% if temperature > 100 %}
+		<div class="alert">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		  <strong>DANGER!</strong> Water is Overheating!
+		</div>
+		{% endif %}
+
+		{% if waterLevel < 50 %}
+		<div class="alert">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		  <strong>Warning!</strong> You have to refill the water deposit
+		</div>
+		{% endif %}
+
+		{% if coffeeLevel < 50 %}
+		<div class="alert">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		  <strong>Warning!</strong> You have to refill the coffee deposit
+		</div>
+		{% endif %}
+
+		{% if condition %}
+		<div class="coffeeReady">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		  <strong>Perfect!</strong> All is fit to made coffee!
+		</div>
+		{% endif %}
+
+		<!---BottomNavBar -->
+		<ul class="bottomNavBar">
+			 <p class="bottomText"> @2020 - Universidad de León - Rafael Martínez Matías </p>
+		</ul>
+	</body>
+</html> 
