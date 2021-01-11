@@ -11,8 +11,10 @@ def setupSensor(PIN_IN, PIN_OUT):
     GPIO.setup(PIN_OUT, GPIO.OUT) #Pin echo
 
     GPIO.output(PIN_OUT, GPIO.LOW) #?
+    print("Fin Setup")
 
 def calcularDistancia(PIN_IN, PIN_OUT):
+    print("Init Calculo Distancia")
     #Encendemos el sensor para que empiece a calcular la distancia
     GPIO.output(PIN_OUT, GPIO.HIGH)
 
@@ -37,6 +39,7 @@ def calcularDistancia(PIN_IN, PIN_OUT):
 def calcularPorcentaje(MAX_CAP_DIST, distancia):  
     percentage = (MAX_CAP_DIST - distancia)/MAX_CAP_DIST
     return percentage
+
 
 
 
